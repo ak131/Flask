@@ -8,7 +8,7 @@ def student():
 
 
 @app.route('/result', methods=['POST'])
-def studnet_result():
+def student_result():
     result = request.form
     return render_template('student_result.html', result=result)
 
