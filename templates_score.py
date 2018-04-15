@@ -18,5 +18,11 @@ def enter_marks():
     return redirect(url_for('result', marks=marks))
 
 
+@app.route('/result')
+def all_result():
+    dict = {'PHY': 50, 'CHE': 60, 'MATHS': 70}
+    return render_template('all_result.html', result=dict)
+
+
 if __name__ == '__main__':
     app.run(debug=True)
