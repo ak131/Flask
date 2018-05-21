@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        {% if title and user%}
+        <title>{{ title }} - {{ user.username }}</title>
+        {% elif user %}
+        <title>Homepage - {{ user.username }}</title>
+        {% else %}
+        <title>Homepage</title>
+        {% endif %}
+    </head>
+    <body>
+        {% if user %}
+        <h1>Hello {{ user.username }}!</h1>
+        {% else %}
+        <h1>Hello User</h1>
+        {% endif %}
+    </body>
+</html>
